@@ -4,9 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+
     <title>Document</title>
 </head>
 <body>
+    <style>
+        .story-wrap{
+            background-color: aqua;
+            height: 85px;
+            padding: 15px 15px;
+            border-radius: 5px;
+            position: relative;
+            display: flex;
+        }
+        .story-item-wrap{
+            /* width: 70px; */
+            /* margin-right: 20px; */
+            padding: 0 10px;
+        }
+        .st-btn{
+            width: 25px;
+            height: 25px;
+            border: 1px solid white;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+        }
+        .st-btn:hover{
+            cursor: pointer;
+        }
+        .st-btn-left{
+            left: 20px;
+            top: 43px;
+        }
+        .st-btn-right{
+            right: 20px;
+            top: 43px;
+
+        }
+        .story-border{
+            width: 68px;
+            height: 68px;
+            border: 3.5px solid salmon;
+            border-radius: 50%;
+            box-sizing: border-box;
+
+
+        }
+        .story-item{
+            width: 60px;
+        }
+        .story-img{
+            /* border: 3px solid salmon; */
+            border-radius: 50%;
+        }
+        .story-name{
+            text-align: center;
+            padding-left: 8px;
+        }
+    </style>
     <!-- navigation bar section -->
     <div>
 
@@ -15,7 +72,41 @@
     <!-- main wrap -->
     <div>
         <!-- story section -->
-        <div>
+        <div class="col-6">
+            <div class="story-wrap">
+                <!-- start prev & next button  -->
+                <button class="st-btn st-btn-left" onclick="storyPrev()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="st-btn st-btn-right" onclick="storyNext()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <!-- end prev & next button -->
+
+                <!-- start storys -->
+                <div class="story-item-wrap">
+                    <div class="story-item">
+                        <div class="story-border">
+                            <img src="https://via.placeholder.com/60x60" alt="" class="story-img">
+                        </div>
+                        <div class="story-name text-center">
+                            tester
+                        </div>
+                    </div>
+                </div>
+                <div class="story-item-wrap">
+                    <div class="story-item">
+                        <div class="story-border">
+                            <img src="https://via.placeholder.com/60x60" alt="" class="story-img">
+                        </div>
+                        <div class="story-name text-center">
+                            tester
+                        </div>
+                    </div>
+                </div>
+                <!-- end storys -->
+
+            </div>
         </div>
         <!-- post section -->
         <div>
@@ -25,4 +116,14 @@
         </div>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script>
+    function storyPrev(){
+        console.log('st p')
+    }
+    function storyNext(){
+        console.log('st n')
+    }
+</script>
 </html>
